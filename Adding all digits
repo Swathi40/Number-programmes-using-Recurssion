@@ -1,0 +1,6 @@
+def add (num,res=0):
+    if num==0:
+        return 0
+    return num%10+add(num//10)
+num=2215
+print(add(num,res=0))
