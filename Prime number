@@ -1,0 +1,8 @@
+def prime(num,val=2):
+    if val<=num//2+1:
+        if num%val==0:
+            return 'not prime'
+        return 'prime'
+    prime(num,val+1)    
+num=5
+print(prime(num,val=2))
