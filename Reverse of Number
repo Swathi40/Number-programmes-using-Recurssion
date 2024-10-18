@@ -1,0 +1,6 @@
+def reverse(num,pos):
+    if num==0:
+        return 0
+    return(num%10)*pos+reverse(num//10,pos//10)
+num=2215
+print(reverse(num,10**(len(str(num))-1))
