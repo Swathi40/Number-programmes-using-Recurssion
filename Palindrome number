@@ -1,0 +1,6 @@
+def palindrome(num,rev=0):
+    if num==0:
+        return rev
+    return palindrome(num//10,rev*10+num%10)
+num=12321
+print('palindrome' if num==palindrome(num) else 'not palindrome')
