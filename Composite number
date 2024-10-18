@@ -1,0 +1,8 @@
+def composite(num,val=2):
+    if val<=num//2+1:
+        if num%val==0:
+            return 'composite'
+    return 'not composite'
+composite(num,val+1)    
+num=8
+print(composite(num,val=2))
