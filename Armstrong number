@@ -1,0 +1,6 @@
+def armstrong(num,power):
+    if num==0:
+        return 0
+    return(num%10)**power+armstrong((num//10),power)
+num=153
+print('armstrong' if armstrong(num,len(str(num)))==num else 'not armstrong')
