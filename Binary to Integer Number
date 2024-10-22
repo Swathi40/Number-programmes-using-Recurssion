@@ -1,0 +1,7 @@
+def bin_int(num,power=0):
+    if num==0:
+        return 0
+    rem=num%10    
+    return rem*(2**power)+bin_int(num//10,power+1)
+num=1110
+print(bin_int(num))
