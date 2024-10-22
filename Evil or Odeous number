@@ -1,0 +1,10 @@
+def EO(num,count=0):
+    if num==0:
+        return count
+    rem=num%2
+    if rem==1:
+        count+=1
+    return EO(num//2,count)
+num=17
+count = EO(num)
+print('evil number' if count%2==0 else 'odeous number')    
