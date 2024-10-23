@@ -1,0 +1,19 @@
+def palindrome(num):
+    num_str = str(num)
+    if len(num_str) <= 1:
+        return True
+    if num_str[0] == num_str[-1]:
+        return palindrome(num_str[1:-1])
+    return False
+def prime(num, divisor=2):
+    if num < 2:
+        return False
+    if divisor * divisor > num:
+        return True
+    if num % divisor == 0:
+        return False
+    return prime(num, divisor + 1)
+def palyprime(num):
+    return palindrome(num) and prime(num)
+num = 131
+print('palyprime number' if palyprime(num) else 'not palyprime')
